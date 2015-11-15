@@ -97,8 +97,10 @@ class WeTransfer(object):
 				self.finalizeChunks(transferId, dataFileObjectId["file_object_id"], chunkNumber - 1)
 
 	def uploadDir(self, top, transferId):
-		'''descend the directory tree rooted at top,
-		   calling the upload function for each regular file'''
+		'''
+		Descend the directory tree rooted at top, 
+		calling the upload function for each regular file
+		'''
 
 		for root, dirs, files in os.walk(top): 
 			while len(dirs) > 0:  
@@ -163,8 +165,10 @@ class WeTransfer(object):
 		return callback
 
 	def readInChunks(self, file_object, chunk_size=chunksize):
-		"""Lazy function (generator) to read a file piece by piece.
-		Default chunk size: 5Mo."""
+		'''
+		Lazy function (generator) to read a file piece by piece.
+		Default chunk size: 5Mo.
+		'''
 		while True:
 			data = file_object.read(chunk_size)
 			if not data:
