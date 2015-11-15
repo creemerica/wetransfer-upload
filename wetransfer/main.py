@@ -170,7 +170,3 @@ class WeTransfer(object):
 			if not data:
 				break
 			yield data
-
-
-wetransfer = WeTransfer('udidactivation', bitly_url='https://api-ssl.bitly.com/v3/shorten?access_token=6623915d2e6de2b21ce2175600e56046530eeea7&longUrl=')
-print wetransfer.start('test2.pdf')
