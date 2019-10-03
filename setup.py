@@ -29,7 +29,7 @@ setup(
     keywords=['wetransfer', 'upload'],
     packages=find_packages(exclude=['contrib', 'docs', 'tests']),
     install_requires=[
-        "requests==2.7.0",
+        "requests==2.20.0",
         "requests_toolbelt==0.4.0"
     ]
 )
